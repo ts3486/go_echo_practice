@@ -25,11 +25,11 @@ e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
     e.GET("/", func(c echo.Context) error {
         return c.String(http.StatusOK, "Hello, World!")
     })
-	e.GET("/user", user.Create)
-    e.GET("/users/:id", user.GetUser)
-    e.PUT("/users/:id", user.UpdateUser)
-    e.DELETE("/users/:id", user.DeleteUser)
-    e.GET("/users", user.GetAllUsers)
+	e.POST("/user", user.Create)
+    e.GET("/users/:id", user.Get)
+    e.PUT("/users/:id", user.Update)
+    e.DELETE("/users/:id", user.Delete)
+    e.GET("/users", user.GetAll)
     
     return e
 }
