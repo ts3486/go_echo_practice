@@ -1,0 +1,5 @@
+development:
+    dialect: mysql
+    dir: db/migrations
+    datasource:  dbname=test sslmode=disable
+
